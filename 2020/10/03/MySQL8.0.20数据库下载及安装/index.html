@@ -28,7 +28,7 @@
 <meta property="og:description" content="MySQL8.0.20数据库软件下载及安装1、MySQL数据软件的社区版、企业版、集群版区别 在这个下载界面会有几个版本的选择。   （1）. MySQL Community Server 社区版本，开源免费，但不提供官方技术支持。    （2）. MySQL Enterprise Edition 企业版本，需付费，可以试用30天。   （3）. MySQL Cluster 集群版，开源免费。可将">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-03T10:12:18.290Z">
-<meta property="article:modified_time" content="2020-10-03T12:20:11.998Z">
+<meta property="article:modified_time" content="2020-10-03T12:27:50.334Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
 
@@ -174,7 +174,7 @@
               <span class="post-meta-item-text">Posted on</span>
               
 
-              <time title="Created: 2020-10-03 18:12:18 / Modified: 20:20:11" itemprop="dateCreated datePublished" datetime="2020-10-03T18:12:18+08:00">2020-10-03</time>
+              <time title="Created: 2020-10-03 18:12:18 / Modified: 20:27:50" itemprop="dateCreated datePublished" datetime="2020-10-03T18:12:18+08:00">2020-10-03</time>
             </span>
 
           
@@ -211,8 +211,10 @@
 <li>将压缩包解压到想要将MySQL安装的目录最后的根目录就是最后完整的安装目录</li>
 </ul>
 </li>
-<li>3.2、在安装目录中新建 my.ini 空文件</li>
-<li>3.3、配置my.ini文件</li>
+<li>3.2、在安装目录中新建 my.ini 空文件并如下配置该文件<ul>
+<li>打开 ”my.ini“ 文件，复制下列内容，记得替换 【安装目录】 部分，保存<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[mysql]  </span><br><span class="line"><span class="comment"># 设置 mysql 客户端默认字符集  </span></span><br><span class="line">default-character-<span class="keyword">set</span>=utf8  </span><br><span class="line">​</span><br><span class="line">[mysqld]  </span><br><span class="line"><span class="comment">#设置 3306 端口  </span></span><br><span class="line">port = <span class="number">3306</span>  </span><br><span class="line">​</span><br><span class="line"><span class="comment"># 设置 mysql 的安装目录  </span></span><br><span class="line">basedir= 【安装目录】</span><br><span class="line">​</span><br><span class="line"><span class="comment"># 设置 mysql 数据库的数据的存放目录  </span></span><br><span class="line">datadir= 【安装目录】\<span class="keyword">data</span>  </span><br><span class="line">​</span><br><span class="line"><span class="comment"># 允许最大连接数  </span></span><br><span class="line">max_connections=<span class="number">200</span>  </span><br><span class="line">​</span><br><span class="line"><span class="comment"># 服务端使用的字符集默认为 8 比特编码的 latin1 字符集  </span></span><br><span class="line"><span class="built_in">character</span>-<span class="keyword">set</span>-<span class="keyword">server</span>=utf8  </span><br><span class="line">​</span><br><span class="line"><span class="comment"># 创建新表时将使用的默认存储引擎  </span></span><br><span class="line"><span class="keyword">default</span>-<span class="keyword">storage</span>-<span class="keyword">engine</span>=<span class="keyword">INNODB</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+</li>
 </ul>
 
     </div>
