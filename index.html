@@ -185,7 +185,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-10 09:24:07" itemprop="dateModified" datetime="2020-10-10T09:24:07+08:00">2020-10-10</time>
+                <time title="修改时间：2020-10-10 11:05:51" itemprop="dateModified" datetime="2020-10-10T11:05:51+08:00">2020-10-10</time>
               </span>
 
           
@@ -207,7 +207,7 @@
 <p>条件表达式：<br>（1）条件运算符表达式  <code>&gt; 、 &lt;、  =、  != 、 &gt;=  、 &lt;=</code><br>（2）逻辑运算功符表达式  <code>&amp;&amp;、  || 、!、  and 、 or 、 not</code>（符号和英文是对应的推荐用英文） <br>（3）模糊条件表达式  <code> like 、  between and 、in  、 is null</code></p>
 </blockquote>
 </li>
-<li><h3 id="【示例】-gt-、-lt-、-、-、-gt-、-lt"><a href="#【示例】-gt-、-lt-、-、-、-gt-、-lt" class="headerlink" title="【示例】&gt; 、 &lt;、  =、  != 、 &gt;=  、 &lt;="></a><strong>【示例】<code>&gt; 、 &lt;、  =、  != 、 &gt;=  、 &lt;=</code></strong></h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">1-0、查询员工表中年龄大于35岁的所有员工信息</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> age&gt;<span class="number">35</span>;</span><br><span class="line"></span><br><span class="line">1-1、查询员工表中年龄小于25岁的所有员工信息</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> age&lt;<span class="number">25</span>;</span><br><span class="line"></span><br><span class="line">1-2、查询员工表中年龄不等于20岁的所有员工信息</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> age != <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line">1-3、查询员工表中年龄小于等于20岁的所有员工信息</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> age &lt;= <span class="number">20</span>;</span><br><span class="line"></span><br><span class="line">1-4、查询员工表中年龄大于等于20岁的所有员工信息</span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employees <span class="keyword">WHERE</span> age &gt;= <span class="number">20</span>;</span><br></pre></td></tr></table></figure>
+</ul>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2020/10/09/04%20select%20%E6%9D%A1%E4%BB%B6%E6%9F%A5%E8%AF%A2/#more" rel="contents">
@@ -265,7 +265,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-09 20:42:59" itemprop="dateModified" datetime="2020-10-09T20:42:59+08:00">2020-10-09</time>
+                <time title="修改时间：2020-10-10 11:06:04" itemprop="dateModified" datetime="2020-10-10T11:06:04+08:00">2020-10-10</time>
               </span>
 
           
@@ -286,46 +286,15 @@
 <p> <strong>注释》</strong><br>（1）查询列表可以是表字段、常量、表达式、函数（有时候每个字段需要添加着重符号` ` 用于区分为非关键字）<br><br>（2）查询的结果会形成一个新的虚拟表，该虚拟表的字段就是查询语句的查询列表名称 </p>
 </blockquote>
 </li>
-<li><h3 id="【示例】"><a href="#【示例】" class="headerlink" title="【示例】"></a><strong>【示例】</strong></h3></li>
-<li><h4 id="1-2、字段查询示例"><a href="#1-2、字段查询示例" class="headerlink" title="1.2、字段查询示例"></a><strong>1.2、字段查询示例</strong></h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1-1、查询员工表中的姓名字段</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="string">`name`</span> <span class="keyword">FROM</span> employee;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1-2、查看员工表的中所有人的姓名和年龄</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="string">`name`</span>,<span class="string">`age`</span> <span class="keyword">FROM</span> employee;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 1-3、查询员工表中所有人的所有信息</span></span><br><span class="line"><span class="keyword">SELECT</span> * <span class="keyword">FROM</span> employee;</span><br></pre></td></tr></table></figure></li>
-<li><h4 id="1-3、常量查询示例"><a href="#1-3、常量查询示例" class="headerlink" title="1.3、常量查询示例"></a><strong>1.3、常量查询示例</strong></h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>  <span class="number">100</span> <span class="keyword">FROM</span> employee;</span><br><span class="line"></span><br><span class="line"><span class="keyword">SELECT</span> <span class="string">&#x27;john&#x27;</span> <span class="keyword">FROM</span> employee;</span><br></pre></td></tr></table></figure></li>
-<li><h4 id="1-4、表达式查询示例"><a href="#1-4、表达式查询示例" class="headerlink" title="1.4、表达式查询示例"></a><strong>1.4、表达式查询示例</strong></h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span>  <span class="number">10</span>+<span class="number">20</span> <span class="keyword">FROM</span> employee;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p><strong>注释 》</strong><br>sql中的加号+只是运算符,有一个不为数字则将其转换为数值再做加法，如果转换失败则将其用0代替再做加法运算,有一个为null结果为null</p>
-</blockquote>
-</li>
 </ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="number">100</span>%<span class="number">98</span> <span class="keyword">FROM</span> employee;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><h4 id="1-5、函数查询示例"><a href="#1-5、函数查询示例" class="headerlink" title="1.5、函数查询示例"></a><strong>1.5、函数查询示例</strong></h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">version</span>() <span class="keyword">FROM</span> employee;</span><br></pre></td></tr></table></figure>
-<h2 id="2、起别名"><a href="#2、起别名" class="headerlink" title="2、起别名"></a>2、起别名</h2></li>
-</ul>
-<hr>
-<ul>
-<li><h3 id="【语法】-1"><a href="#【语法】-1" class="headerlink" title="【语法】"></a><strong>【语法】</strong></h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 字段<span class="number">1</span> <span class="keyword">AS</span> 字段<span class="number">1</span>别名, 字段<span class="number">2</span> <span class="keyword">AS</span> 字段<span class="number">2</span>别名 <span class="keyword">FROM</span> 表名；</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p> <strong>注释》</strong><br>（1）查询的结果会形成一个新的虚拟表，该虚拟表的字段就是查询语句的查询列表名称的别名<br><br> (2) 不是每一项都需要同时取别名</p>
-</blockquote>
-</li>
-</ul>
-<h2 id="3、结果去重"><a href="#3、结果去重" class="headerlink" title="3、结果去重"></a>3、结果去重</h2><hr>
-<ul>
-<li><h3 id="【语法】-2"><a href="#【语法】-2" class="headerlink" title="【语法】"></a><strong>【语法】</strong></h3></li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> 字段 <span class="keyword">FROM</span> 表名;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p> <strong>注释 》</strong><br>（1）查询的结果会形成一个新的虚拟表，去掉结果中重复的内容<br>(2) 只能有一个查询字段的时候使用</p>
-</blockquote>
-<h2 id="4、查询两个字段合成一个字段显示结果"><a href="#4、查询两个字段合成一个字段显示结果" class="headerlink" title="4、查询两个字段合成一个字段显示结果"></a>4、查询两个字段合成一个字段显示结果</h2><hr>
-<ul>
-<li><h3 id="【语法】-3"><a href="#【语法】-3" class="headerlink" title="【语法】"></a><strong>【语法】</strong></h3></li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">CONCAT</span>(<span class="string">&#x27;字段1&#x27;</span>,<span class="string">&#x27;字段2&#x27;</span>) <span class="keyword">AS</span> 别名 <span class="keyword">FROM</span> 表名;</span><br></pre></td></tr></table></figure>
-<ul>
-<li><h3 id="【示例】-1"><a href="#【示例】-1" class="headerlink" title="【示例】"></a><strong>【示例】</strong></h3></li>
-</ul>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">4-0、查询员工表的中所有员工的姓和名并合并成完整的姓名输出</span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">CONCAT</span>(<span class="string">&#x27;fristname&#x27;</span>,<span class="string">&#x27;lastname&#x27;</span>) <span class="keyword">AS</span> <span class="keyword">name</span> <span class="keyword">FROM</span> employee;</span><br></pre></td></tr></table></figure>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/10/08/03%20select%20%E5%9F%BA%E7%A1%80%E6%9F%A5%E8%AF%A2/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -375,7 +344,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-09 20:42:53" itemprop="dateModified" datetime="2020-10-09T20:42:53+08:00">2020-10-09</time>
+                <time title="修改时间：2020-10-10 11:06:45" itemprop="dateModified" datetime="2020-10-10T11:06:45+08:00">2020-10-10</time>
               </span>
 
           
@@ -390,49 +359,14 @@
 
       
           <h2 id="1、规范"><a href="#1、规范" class="headerlink" title="1、规范"></a>1、规范</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1-0、不区分大小写（关键字大写、表名、列名等小写）</span><br><span class="line">1-1、命令使用分号结尾</span><br><span class="line">1-2、命令可以自行缩进或换行（建议关键字单独一行）</span><br></pre></td></tr></table></figure>
-<h2 id="2、注释"><a href="#2、注释" class="headerlink" title="2、注释"></a>2、注释</h2><ul>
-<li><p>单行注释</p>
-<ul>
-<li>2-0、<code>#注释文字</code></li>
-<li>2-1、<code>-- 注释文字</code></li>
-</ul>
-</li>
-<li><p>多行注释</p>
-<ul>
-<li>2-3、<code>\* 注释文字 \*</code><h2 id="3、常用命令"><a href="#3、常用命令" class="headerlink" title="3、常用命令"></a>3、常用命令</h2></li>
-</ul>
-</li>
-<li><p>3-0、启动和关闭MySQL服务</p>
-<p>  <strong>【语法】</strong></p>
-  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 语法</span></span><br><span class="line">net <span class="keyword">start</span> 服务名称</span><br><span class="line"></span><br><span class="line">net <span class="keyword">stop</span> 服务名称</span><br></pre></td></tr></table></figure>
-<p>  <strong>【示例】</strong></p>
-  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 启动MySQL服务（打开管理员权限的命令行工具输入如下命令）</span></span><br><span class="line">net <span class="keyword">start</span> myql</span><br><span class="line"></span><br><span class="line"><span class="comment"># 关闭MySQL服务（打开管理员权限的命令行工具输入如下命令）</span></span><br><span class="line">net <span class="keyword">stop</span> mysql</span><br></pre></td></tr></table></figure></li>
-<li><p>3-1、登录数据库（MySQL服务开启的状态下才能登录数据库）</p>
-<pre><code>**【语法】**</code></pre>
-   <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 完整语法</span></span><br><span class="line">mysql -h 主机名 -P 端口号 -u 用户名 -p 回车输入密码再回车登录</span><br><span class="line"></span><br><span class="line"><span class="comment">#简易语法</span></span><br><span class="line">mysql -u 用户名 -p 回车输入密码再回车登录</span><br></pre></td></tr></table></figure>
-<p>   <strong>【示例】</strong></p>
-   <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p 回车输入密码再回车登录</span><br></pre></td></tr></table></figure>
-  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -h localhost -P 3306 -u root -p 回车输入密码再回车登录</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
-<ul>
-<li>3-2、查看mysql中的所有数据库 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> <span class="keyword">databases</span>;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>Mysql会有默认的四个数据库用来保存元数据信息、用户信息、性能信息、测试数据库</p>
-</blockquote>
-</li>
-<li>3-3、选择需要操作的数据库比如选择test数据库  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">use</span> <span class="keyword">test</span>;</span><br></pre></td></tr></table></figure></li>
-<li>3-4、查看该数据库中的所有数据表  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">show</span> <span class="keyword">tables</span>;</span><br><span class="line">    ``` </span><br><span class="line">- 3-5、查看某个表的表结构</span><br><span class="line">    ```sql</span><br><span class="line">    desc 表名称;</span><br></pre></td></tr></table></figure></li>
-<li>3-6、查看当前选中的是那个数据库  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">select</span> <span class="keyword">database</span>();</span><br><span class="line">    ``` </span><br><span class="line">- 3-7、查看MySQL版本</span><br><span class="line">    - (1) 登录MySQL状态</span><br><span class="line">        ```sql</span><br><span class="line">        <span class="keyword">select</span> <span class="keyword">version</span>();</span><br></pre></td></tr></table></figure>
-<ul>
-<li>(2)未登录状态  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql <span class="comment">--version</span></span><br></pre></td></tr></table></figure>
-  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -v</span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/10/07/02%20SQL%E8%AF%AD%E6%B3%95%E8%A7%84%E8%8C%83%E5%8F%8A%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -482,7 +416,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-09 20:42:45" itemprop="dateModified" datetime="2020-10-09T20:42:45+08:00">2020-10-09</time>
+                <time title="修改时间：2020-10-10 11:07:06" itemprop="dateModified" datetime="2020-10-10T11:07:06+08:00">2020-10-10</time>
               </span>
 
           
@@ -499,7 +433,6 @@
           <h2 id="1、MySQL数据软件的社区版、企业版、集群版区别"><a href="#1、MySQL数据软件的社区版、企业版、集群版区别" class="headerlink" title="1、MySQL数据软件的社区版、企业版、集群版区别"></a>1、MySQL数据软件的社区版、企业版、集群版区别</h2><ul>
 <li><p>在这个下载界面会有几个版本的选择。</p>
 <p>  （1）. MySQL Community Server 社区版本，开源免费，但不提供官方技术支持。</p>
-<hr>
 <p>  （2）. MySQL Enterprise Edition 企业版本，需付费，可以试用30天。</p>
 <p>  （3）. MySQL Cluster 集群版，开源免费。可将几个MySQL Server封装成一个Server。</p>
 <p>  （4）. MySQL Cluster CGE 高级集群版，需付费。</p>
@@ -508,109 +441,14 @@
 <li><p>MySQL Community Server 是开源免费的，这也是我们通常用的MySQL的版本。根据不同的操作系统平台细分为多个版本，下面我们以windows平台为例来说明。</p>
 </li>
 </ul>
-<h2 id="2、下载MySQL"><a href="#2、下载MySQL" class="headerlink" title="2、下载MySQL"></a>2、下载MySQL</h2><ul>
-<li>2.1、官网下载地址<br><a target="_blank" rel="noopener" href="https://dev.mysql.com/downloads/mysql/">https://dev.mysql.com/downloads/mysql/</a></li>
-<li>2.2、选择 MySQL Community Server（社区版）进入下载</li>
-<li>2.3、选择下载的格式<ul>
-<li>推荐下载第一个 ZIP Archive 内的软件包，mysql-xxx-win64.zip。（这个文件解压缩后即可使用，是编译好的windows64位MySQL。需要手工配置。）</li>
-</ul>
-</li>
-</ul>
-<h2 id="3、安装MySQL"><a href="#3、安装MySQL" class="headerlink" title="3、安装MySQL"></a>3、安装MySQL</h2><ul>
-<li><p>3.1、解压下载的压缩包</p>
-<ul>
-<li>将压缩包解压到想要将MySQL安装的目录最后的根目录就是最后完整的安装目录</li>
-</ul>
-</li>
-<li><p>3.2、在安装目录中新建 my.ini 空文件并如下配置该文件</p>
-<ul>
-<li>打开 ”my.ini“ 文件，复制下列内容，记得替换 【安装目录】 部分，保存<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">[mysql]  </span><br><span class="line"><span class="comment"># 设置 mysql 客户端默认字符集  </span></span><br><span class="line">default-character-<span class="keyword">set</span>=utf8  </span><br><span class="line">​</span><br><span class="line">[mysqld]  </span><br><span class="line"><span class="comment">#设置 3306 端口  </span></span><br><span class="line">port = <span class="number">3306</span>  </span><br><span class="line">​</span><br><span class="line"><span class="comment"># 设置 mysql 的安装目录  </span></span><br><span class="line">basedir= 【安装目录】</span><br><span class="line">​</span><br><span class="line"><span class="comment"># 设置 mysql 数据库的数据的存放目录  </span></span><br><span class="line">datadir= 【安装目录】\<span class="keyword">data</span>  </span><br><span class="line">​</span><br><span class="line"><span class="comment"># 允许最大连接数  </span></span><br><span class="line">max_connections=<span class="number">200</span>  </span><br><span class="line">​</span><br><span class="line"><span class="comment"># 服务端使用的字符集默认为 8 比特编码的 latin1 字符集  </span></span><br><span class="line"><span class="built_in">character</span>-<span class="keyword">set</span>-<span class="keyword">server</span>=utf8  </span><br><span class="line">​</span><br><span class="line"><span class="comment"># 创建新表时将使用的默认存储引擎  </span></span><br><span class="line"><span class="keyword">default</span>-<span class="keyword">storage</span>-<span class="keyword">engine</span>=<span class="keyword">INNODB</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-</li>
-<li><p>3.3、配置环境变量 </p>
-<ul>
-<li>鼠标选中我的电脑》</li>
-<li>右键选择属性》</li>
-<li>选择高级系统设置》</li>
-<li>选择高级下的环境变量》</li>
-<li>系统环境变量下选择新建》</li>
-<li>变量名：<code>MYSQL_HOME</code>》</li>
-<li>变量值：MySQL安装路径》</li>
-<li>编辑系统环境变量下的 <code>Path</code> 变量》</li>
-<li>在 <code>Path</code> 变量下新建环境变量 <code>%MYSQL_HOME%\bin</code></li>
-</ul>
-</li>
-<li><p>3.4、用管理员身份运行命令行工具</p>
-<ul>
-<li>win+x 选择Windows PowerShell（管理员）/ 命令提示符（管理员）</li>
-<li>将命令好工具路径转到MySQL安装目录下的bin目录<ul>
-<li><code>cd D:\ASystemResources\ToolsDevelopment\MySQL\mysql-8.0.20-winx64\bin</code></li>
-</ul>
-</li>
-<li>输入如下命令建立默认数据库<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld <span class="comment">--initialize-insecure --user=mysql </span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>① 此时 MySQL 建立了默认的数据库，用户名为 root，密码为空。<br><br>② 如果提示 mysqld 不存在，检查环境变量设置。</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>3.5、安装服务</p>
-<ul>
-<li>输入下列语句，服务安装完成  <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld -<span class="keyword">install</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>① 第一次安装的话会显示 Service successfully installed.<br><br>② 已经安装过了，会显示 The service already exists! …</p>
-</blockquote>
-</li>
-<li>如未正常安装请先移出服务，输入如下命令<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysqld -remove</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>① 移除成功的话会显示 Service successfully removed.</p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>3.6、启动服务</p>
-<ul>
-<li>输入如下命令启动服务 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net start mysql </span><br></pre></td></tr></table></figure>
-<ul>
-<li>如果遇到 MySQL 无法启动，3534，请检查如下：<ul>
-<li>（1）请不要手动创建data目录</li>
-<li>（2）my.ini文件中配置的目录中是否有t开头的文件夹如果有则在配置路径是使用 <code>//</code> 替换</li>
-<li>（3）my.ini文件的编码方式是不是 <code>ANSI</code>格式如果不是请改成这个格式</li>
-</ul>
-</li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>3.7、登录MySQL</p>
-<ul>
-<li><p>输入如下命令回车后输入密码</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql -u root -p</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>① -u 指的是登录的用户名，-p 是密码<br><br>② 用户名默认为 root，此时密码为空</p>
-</blockquote>
-<p>此时默认密码为空直接回车即可登录</p>
-</li>
-</ul>
-</li>
-<li><p>3.8、修改密码（第一次登录后应第一时间修改密码）</p>
-<ul>
-<li>输入下列语句，将 <code>password</code> 替换为新密码，修改密码完成<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">ALTER</span> <span class="keyword">USER</span> <span class="string">&#x27;root&#x27;</span>@<span class="string">&#x27;localhost&#x27;</span> <span class="keyword">IDENTIFIED</span> <span class="keyword">BY</span> <span class="string">&#x27;password&#x27;</span>;</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>① 为了避免之后出现登录问题，登陆后第一件事情应该是修改密码。<br><br>② password 是你的新密码部分，自行修改。<br><br>③ 注意密码在单引号内部 <code>password</code><br><br>④ 注意结尾的分号 <code>;</code><br></p>
-</blockquote>
-</li>
-</ul>
-</li>
-<li><p>3.9、退出数据库和停止服务</p>
-<ul>
-<li>退出数据库<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">quit;</span><br></pre></td></tr></table></figure></li>
-<li>停止数据库服务<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">net <span class="keyword">stop</span> mysql</span><br></pre></td></tr></table></figure>
-参考文章：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/112765207">https://zhuanlan.zhihu.com/p/112765207</a></li>
-</ul>
-</li>
-</ul>
-
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/10/06/01%20MySQL8.0.20%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%8B%E8%BD%BD%E5%8F%8A%E5%AE%89%E8%A3%85/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
