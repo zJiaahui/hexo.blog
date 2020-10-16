@@ -20,17 +20,17 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="分组查询【语法】 12345SELECT 分组函数,分组列表（要求出现在group by的后面）From 表WHERE 条件表达式group by 分组列表ORDER BY 子句; 【案例】 12# 查询每个工种的最高工资SELECT MAX(salary) ,job_id FROM employees group by job_id;">
+  <meta name="description" content="【语法】 12345SELECT 分组函数,分组列表（要求出现在group by的后面）From 表WHERE 条件表达式group by 分组列表ORDER BY 子句; 【案例】 12# 查询每个工种的最高工资SELECT MAX(salary) ,job_id FROM employees group by job_id;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="zjiaahui">
+<meta property="og:title" content="【MySQL系列】-[6] SQL分组查询">
 <meta property="og:url" content="http://example.com/2020/10/14/07%20select%20%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2/index.html">
 <meta property="og:site_name" content="zjiaahui">
-<meta property="og:description" content="分组查询【语法】 12345SELECT 分组函数,分组列表（要求出现在group by的后面）From 表WHERE 条件表达式group by 分组列表ORDER BY 子句; 【案例】 12# 查询每个工种的最高工资SELECT MAX(salary) ,job_id FROM employees group by job_id;">
+<meta property="og:description" content="【语法】 12345SELECT 分组函数,分组列表（要求出现在group by的后面）From 表WHERE 条件表达式group by 分组列表ORDER BY 子句; 【案例】 12# 查询每个工种的最高工资SELECT MAX(salary) ,job_id FROM employees group by job_id;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-10-14T09:38:33.719Z">
-<meta property="article:modified_time" content="2020-10-10T10:29:51.883Z">
+<meta property="article:modified_time" content="2020-10-16T04:11:41.612Z">
 <meta property="article:author" content="zjiaahui">
-<meta property="article:tag" content="前端开发">
+<meta property="article:tag" content="MySQL">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://example.com/2020/10/14/07%20select%20%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2/">
@@ -46,7 +46,7 @@
   };
 </script>
 
-  <title> | zjiaahui</title>
+  <title>【MySQL系列】-[6] SQL分组查询 | zjiaahui</title>
   
 
 
@@ -175,7 +175,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
+          【MySQL系列】-[6] SQL分组查询
         </h1>
 
         <div class="post-meta">
@@ -192,7 +192,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-10 18:29:51" itemprop="dateModified" datetime="2020-10-10T18:29:51+08:00">2020-10-10</time>
+                <time title="修改时间：2020-10-16 12:11:41" itemprop="dateModified" datetime="2020-10-16T12:11:41+08:00">2020-10-16</time>
               </span>
 
           <br>
@@ -201,7 +201,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>150</span>
+              <span>146</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -220,7 +220,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <h1 id="分组查询"><a href="#分组查询" class="headerlink" title="分组查询"></a>分组查询</h1><p><strong>【语法】</strong></p>
+        <p><strong>【语法】</strong></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 分组函数,分组列表（要求出现在<span class="keyword">group</span> <span class="keyword">by</span>的后面）</span><br><span class="line"><span class="keyword">From</span> 表</span><br><span class="line"><span class="keyword">WHERE</span> 条件表达式</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> 分组列表</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> 子句;</span><br></pre></td></tr></table></figure>
 <p><strong>【案例】</strong></p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查询每个工种的最高工资</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">MAX</span>(salary) ,job_id <span class="keyword">FROM</span> employees <span class="keyword">group</span> <span class="keyword">by</span> job_id;</span><br></pre></td></tr></table></figure>
@@ -238,7 +238,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://example.com/2020/10/14/07%20select%20%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2/" title="">http://example.com/2020/10/14/07 select 分组查询/</a>
+    <a href="http://example.com/2020/10/14/07%20select%20%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2/" title="【MySQL系列】-[6] SQL分组查询">http://example.com/2020/10/14/07 select 分组查询/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -248,6 +248,9 @@
 
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+          </div>
 
         
 
@@ -317,7 +320,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2"><span class="nav-number">1.</span> <span class="nav-text">分组查询</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
