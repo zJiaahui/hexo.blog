@@ -173,7 +173,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2020/10/14/07%20select%20%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2/" class="post-title-link" itemprop="url">【MySQL系列】-[6] SQL分组查询</a>
+            <a href="/2020/10/14/07%20select%20%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2/" class="post-title-link" itemprop="url">【MySQL系列】-[7] SQL分组查询</a>
         </h2>
 
         <div class="post-meta">
@@ -190,7 +190,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-10-16 12:11:41" itemprop="dateModified" datetime="2020-10-16T12:11:41+08:00">2020-10-16</time>
+                <time title="修改时间：2020-10-17 10:28:32" itemprop="dateModified" datetime="2020-10-17T10:28:32+08:00">2020-10-17</time>
               </span>
 
           <br>
@@ -199,7 +199,7 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>146</span>
+              <span>262</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
@@ -218,10 +218,15 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><strong>【语法】</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 分组函数,分组列表（要求出现在<span class="keyword">group</span> <span class="keyword">by</span>的后面）</span><br><span class="line"><span class="keyword">From</span> 表</span><br><span class="line"><span class="keyword">WHERE</span> 条件表达式</span><br><span class="line"><span class="keyword">group</span> <span class="keyword">by</span> 分组列表</span><br><span class="line"><span class="keyword">ORDER</span> <span class="keyword">BY</span> 子句;</span><br></pre></td></tr></table></figure>
-<p><strong>【案例】</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查询每个工种的最高工资</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">MAX</span>(salary) ,job_id <span class="keyword">FROM</span> employees <span class="keyword">group</span> <span class="keyword">by</span> job_id;</span><br></pre></td></tr></table></figure>
+          <p>MySQL中SQL的<code>SELECT 分组函数,分组列表（要求出现在group by的后面）From 表 WHERE 条件表达式 group by 分组列表 ORDER BY 子句;</code>分组查询的查询列表由分组函数、分组列表构成；group by 后必须是分组列表…</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2020/10/14/07%20select%20%E5%88%86%E7%BB%84%E6%9F%A5%E8%AF%A2/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
